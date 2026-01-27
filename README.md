@@ -158,7 +158,7 @@ Kontribusi, issues, dan suggestions welcome! Silakan buat issue atau pull reques
 
 - **Website:** https://aderamdani.web.id
 - **GitHub:** https://github.com/aderamdani
-- **Email:** mr.aderamdani@gmail.com(mailto:mr.aderamdani@gmail.com)
+- **Email:** mr.aderamdani@gmail.com
 
 ---
 
