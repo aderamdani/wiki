@@ -148,7 +148,7 @@ Wiki dilengkapi dengan fitur search lokal yang berjalan di sisi client. Search a
 
 ## 📄 Lisensi
 
-Project ini dilisensikan di bawah [MIT License](LICENSE)
+Project ini dilisensikan di bawah [MIT License](https://github.com/aderamdani/wiki/blob/main/LICENSE)
 
 ## 🤝 Kontribusi
 
