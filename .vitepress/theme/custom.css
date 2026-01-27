@@ -1,0 +1,108 @@
+/* Custom styles for features section to display 4 columns */
+
+:root {
+  --vp-home-hero-image-background-image: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  --vp-home-hero-image-filter: blur(44px);
+}
+
+/* Hero image with strong shadow and glow effect */
+.VPHero .image {
+  filter: drop-shadow(0 0 30px rgba(255, 255, 255, 0.4)) drop-shadow(0 20px 50px rgba(0, 0, 0, 0.3)) !important;
+}
+
+.VPHero .image img {
+  filter: drop-shadow(0 0 20px rgba(255, 255, 255, 0.5)) !important;
+}
+
+/* Features grid - 4 columns for 8 items */
+.VPFeatures {
+  display: grid !important;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)) !important;
+  gap: 24px !important;
+}
+
+.VPFeature {
+  display: flex !important;
+  flex-direction: column !important;
+  padding: 32px 24px !important;
+  border: none !important;
+  border-radius: 14px !important;
+  text-decoration: none !important;
+  color: inherit !important;
+  background: var(--vp-c-bg-soft) !important;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1) !important;
+  position: relative !important;
+  overflow: hidden !important;
+}
+
+.VPFeature:hover {
+  transform: translateY(-6px) !important;
+  box-shadow: 0 12px 32px rgba(59, 130, 246, 0.2) !important;
+  background: var(--vp-c-bg) !important;
+}
+
+.VPFeature .icon {
+  font-size: 48px !important;
+  line-height: 1 !important;
+  margin-bottom: 18px !important;
+  transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1) !important;
+}
+
+.VPFeature:hover .icon {
+  transform: scale(1.15) rotate(-5deg) !important;
+}
+
+.VPFeature h3 {
+  margin: 8px 0 12px 0 !important;
+  font-size: 18px !important;
+  font-weight: 700 !important;
+}
+
+.VPFeature p {
+  margin: 0 !important;
+  font-size: 13px !important;
+  color: var(--vp-c-text-2) !important;
+  line-height: 1.6 !important;
+}
+
+.VPFeature a {
+  text-decoration: none !important;
+  color: inherit !important;
+}
+
+@media (max-width: 1200px) {
+  .VPFeatures {
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)) !important;
+  }
+}
+
+@media (max-width: 768px) {
+  .VPFeatures {
+    grid-template-columns: repeat(2, 1fr) !important;
+    gap: 16px !important;
+  }
+  
+  .VPFeature {
+    padding: 24px 16px !important;
+  }
+  
+  .VPFeature .icon {
+    font-size: 36px !important;
+    margin-bottom: 12px !important;
+  }
+  
+  .VPFeature h3 {
+    font-size: 16px !important;
+  }
+  
+  .VPFeature p {
+    font-size: 12px !important;
+  }
+}
+
+@media (max-width: 480px) {
+  .VPFeatures {
+    grid-template-columns: 1fr !important;
+  }
+}
+
