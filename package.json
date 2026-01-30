@@ -16,5 +16,8 @@
   "devDependencies": {
     "vitepress": "^1.6.4",
     "vue": "^3.5.27"
+  },
+  "dependencies": {
+    "lucide": "^0.563.0"
   }
 }

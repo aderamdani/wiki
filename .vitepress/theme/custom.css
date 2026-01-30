@@ -24,36 +24,54 @@
 .VPFeature {
   display: flex !important;
   flex-direction: column !important;
-  padding: 32px 24px !important;
-  border: none !important;
-  border-radius: 14px !important;
+  justify-content: flex-start !important;
+  /* Align to top */
+  align-items: flex-start !important;
+  text-align: left !important;
+  padding: 24px !important;
+  border: 1px solid var(--vp-c-divider) !important;
+  /* Subtle border like reference */
+  border-radius: 12px !important;
   text-decoration: none !important;
   color: inherit !important;
   background: var(--vp-c-bg-soft) !important;
   transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1) !important;
   position: relative !important;
   overflow: hidden !important;
+  height: 100% !important;
+  /* Ensure consistent height in row */
 }
 
 .VPFeature:hover {
-  transform: translateY(-6px) !important;
-  box-shadow: 0 12px 32px rgba(59, 130, 246, 0.2) !important;
-  background: var(--vp-c-bg) !important;
+  transform: translateY(-4px) !important;
+  border-color: var(--vp-c-brand) !important;
+  background: var(--vp-c-bg-soft-up) !important;
 }
 
+/* Feature Icon Container */
 .VPFeature .icon {
-  font-size: 48px !important;
-  line-height: 1 !important;
-  margin-bottom: 18px !important;
-  transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1) !important;
+  display: flex !important;
+  justify-content: center !important;
+  align-items: center !important;
+  width: 48px !important;
+  height: 48px !important;
+  margin-bottom: 16px !important;
+  /* Reduced margin */
+  background-color: var(--vp-c-bg) !important;
+  /* Distinct background */
+  border-radius: 8px !important;
+  transition: all 0.3s ease !important;
+  border: 1px solid var(--vp-c-divider) !important;
 }
 
 .VPFeature:hover .icon {
-  transform: scale(1.15) rotate(-5deg) !important;
+  background-color: var(--vp-c-brand) !important;
+  border-color: var(--vp-c-brand) !important;
+  transform: none !important;
 }
 
 .VPFeature h3 {
-  margin: 8px 0 12px 0 !important;
+  margin: 0 0 8px 0 !important;
   font-size: 18px !important;
   font-weight: 700 !important;
 }
@@ -81,20 +99,22 @@
     grid-template-columns: repeat(2, 1fr) !important;
     gap: 16px !important;
   }
-  
+
   .VPFeature {
     padding: 24px 16px !important;
+    height: auto !important;
   }
-  
+
   .VPFeature .icon {
-    font-size: 36px !important;
+    width: 40px !important;
+    height: 40px !important;
     margin-bottom: 12px !important;
   }
-  
+
   .VPFeature h3 {
     font-size: 16px !important;
   }
-  
+
   .VPFeature p {
     font-size: 12px !important;
   }
@@ -106,3 +126,28 @@
   }
 }
 
+/* Lucide Icons in Sidebar */
+.v-icon {
+  display: inline-block;
+  vertical-align: middle;
+  transform: translateY(-2px);
+  margin-right: 8px;
+  color: var(--vp-c-brand);
+  width: 18px;
+  height: 18px;
+}
+
+/* Feature Icon (SVG) Sizing inside the container */
+.VPFeature .v-icon {
+  width: 24px !important;
+  height: 24px !important;
+  margin: 0 !important;
+  /* Remove individual margin */
+  color: var(--vp-c-brand) !important;
+  transition: color 0.3s ease !important;
+}
+
+.VPFeature:hover .v-icon {
+  color: white !important;
+  /* White icon on hover */
+}
