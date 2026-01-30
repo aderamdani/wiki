@@ -41,10 +41,18 @@ defaults write com.apple.lookup.shared LookupSuggestionsDisabled 1
 
 ## 4. Finder Settings
 
+
 ### Show Hidden Files
 
 ```bash
 defaults write com.apple.finder AppleShowAllFiles -bool true
+killall Finder
+```
+
+### Show Status Bar
+
+```bash
+defaults write com.apple.finder ShowStatusBar -bool true
 killall Finder
 ```
 
@@ -62,7 +70,21 @@ defaults write NSGlobalDomain com.apple.springing.enabled -bool true
 defaults write NSGlobalDomain com.apple.springing.delay -float 0
 ```
 
+### View Options (List View)
+
+Buka Finder, tekan `⌘J` (Show View Options).
+![View Options](/images/macos-setup/system/view-options.png)
+
+```bash
+# Use list view in all Finder windows by default
+# Four-letter codes for the other view modes: `icnv`, `clmv`, `Flwv`
+defaults write com.apple.finder FXPreferredViewStyle -string "Nlsv"
+```
+
 ## 5. Trackpad & Mouse Optimization
+
+### Three Finger Drag
+**System Settings** → **Accessibility** → **Pointer Control** → **Trackpad Options...** → **Dragging style**: **Three Finger Drag**
 
 ```bash
 # Faster trackpad
@@ -70,9 +92,6 @@ defaults write -g com.apple.trackpad.scaling -float 5
 
 # Trackpad: enable tap to click
 defaults write com.apple.AppleMultitouchTrackpad Clicking -bool true
-
-# Natural scrolling
-defaults write NSGlobalDomain com.apple.swapMouseButtonsEnabled -bool false
 
 # Increase mouse speed
 defaults write -g com.apple.mouse.scaling -float 2.5
@@ -91,8 +110,48 @@ Configure keyboard untuk development yang optimal:
 defaults write NSGlobalDomain ApplePressAndHoldEnabled -bool false
 ```
 
-## 7. Dock Configuration
+## 7. Desktop & Dock Settings
 
+Konfigurasi berikut disesuaikan untuk produktivitas dengan tampilan minimalis.
+
+### Dock
+- **Size**: Small (sekitar 32px)
+- **Magnification**: Off
+- **Position**: Bottom
+- **Minimize window animation**: Scale Effect
+- **Double-click action**: Zoom
+- **Minimize windows into application icon**: ✅ On
+- **Automatically hide and show the Dock**: ✅ On
+- **Animate opening applications**: ❌ Off
+- **Show indicators for open applications**: ✅ On
+- **Show suggested and recent apps in Dock**: ❌ Off
+
+### Desktop & Stage Manager
+- **Show items**:
+    - [x] On Desktop
+    - [ ] In Stage Manager
+- **Click wallpaper to show desktop**: Only in Stage Manager
+- **Stage Manager**: ❌ Off
+- **Widgets**:
+    - Show Widgets: [ ] On Desktop [ ] In Stage Manager (Off/Hidden)
+    - iPhone Widgets: ❌ Off
+
+### Windows
+- **Prefer tabs when opening documents**: In Full Screen
+- **Close windows when quitting an application**: ✅ On
+- **Drag windows to left or right edge of screen to tile**: ✅ On
+- **Drag windows to menu bar to fill screen**: ✅ On
+- **Hold ⌥ key while dragging windows to tile**: ✅ On
+- **Tiled windows have margins**: ❌ Off
+
+### Mission Control
+- **Automatically rearrange Spaces based on most recent use**: ✅ On
+- **When switching to an application, switch to a Space with open windows for the application**: ✅ On
+- **Group windows by application**: ✅ On
+- **Displays have separate Spaces**: ✅ On
+- **Drag windows to top of screen to enter Mission Control**: ✅ On
+
+### Command Line Setup
 ```bash
 # Auto-hide Dock
 defaults write com.apple.dock autohide -bool true
@@ -107,11 +166,31 @@ defaults write com.apple.dock tilesize -int 32
 # Remove recent apps from Dock
 defaults write com.apple.dock show-recents -bool false
 
+# Disable "Animate opening applications"
+defaults write com.apple.dock launchanim -bool false
+
+# Enable "Minimize windows into application icon"
+defaults write com.apple.dock minimize-to-application -bool true
+
 # Restart Dock
 killall Dock
 ```
 
-## 8. Safari Optimization
+## 8. Control Center & Menu Bar
+
+### Modules
+- **Wi-Fi**: Show in Menu Bar
+- **Bluetooth**: Show in Menu Bar
+- **AirDrop**: Show in Menu Bar
+- **Sound**: Always Show in Menu Bar
+- **Battery**: Show Percentage
+- **Clock**: Digital, Show Date, Show seconds
+
+### Other Modules
+- **Splitlight**: Don't show in Menu Bar (gunakan ⌘ + Space)
+- **Siri**: Don't show in Menu Bar
+
+## 9. Safari Optimization
 
 ```bash
 # Show full URL in address bar
@@ -124,7 +203,7 @@ defaults write com.apple.Safari IncludeInternalDebugMenu -bool true
 defaults write com.apple.Safari AutoOpenSafeDownloads -bool false
 ```
 
-## 9. Activity Monitor
+## 10. Activity Monitor
 
 Monitor sistem resources:
 
@@ -132,7 +211,7 @@ Monitor sistem resources:
 open /Applications/Utilities/Activity\ Monitor.app
 ```
 
-## 10. Storage Management
+## 11. Storage Management
 
 ### Check Storage Usage
 
@@ -154,7 +233,7 @@ rm -rf ~/Library/Caches/*
 rm -rf ~/Library/Logs/*
 ```
 
-## 11. Security Settings
+## 12. Security Settings
 
 ### Enable FileVault
 
@@ -174,7 +253,7 @@ sudo defaults write /Library/Preferences/com.apple.alf globalstate -int 1
 sudo mdutil -a -i off
 ```
 
-## 12. Energy Settings
+## 13. Energy Settings
 
 Optimize battery life untuk laptop:
 
@@ -182,13 +261,13 @@ Optimize battery life untuk laptop:
 - Enable "Put hard disks to sleep when possible"
 - Enable "Slightly dim the display while on battery power"
 
-## 13. iCloud Sync Settings
+## 14. iCloud Sync Settings
 
 - System Preferences → iCloud
 - Pilih items untuk sync
 - Disable "Optimize Mac Storage" jika ingin keep files locally
 
-## 14. Time Machine Backup
+## 15. Time Machine Backup
 
 Setup automatic backup:
 
@@ -206,26 +285,8 @@ Manual backup:
 tmutil startbackup
 ```
 
-## 15. Notification Settings
+## 16. Notification Settings
 
 - System Preferences → Notifications
 - Disable notifications dari apps yang tidak perlu
 - Enable "Do Not Disturb" scheduling
-
-## Checklist System Configuration
-
-- [ ] macOS updated
-- [ ] Animations disabled
-- [ ] Spotlight suggestions disabled
-- [ ] Finder hidden files enabled
-- [ ] Trackpad & mouse optimized
-- [ ] Keyboard settings configured
-- [ ] Dock customized
-- [ ] Safari optimized
-- [ ] FileVault enabled
-- [ ] Firewall enabled
-- [ ] Time Machine backup configured
-- [ ] Notification settings optimized
-- [ ] Storage cleaned
-
-Selamat! Sistem macOS Anda sudah optimal dan siap untuk development yang produktif!

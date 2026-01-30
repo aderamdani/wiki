@@ -4,21 +4,21 @@
     "type": "split",
     "children": [
       {
-        "id": "60e2f22c11331cc9",
+        "id": "cc9357f74f9e4421",
         "type": "tabs",
         "children": [
           {
-            "id": "9a36c3c498d82aef",
+            "id": "17fa3077b932bc71",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "docs/macos-setup/terminal.md",
+                "file": "docs/macos-setup/system.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "terminal"
+              "title": "system"
             }
           }
         ]
@@ -94,7 +94,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "docs/macos-setup/terminal.md",
+                "file": "docs/macos-setup/system.md",
                 "collapseAll": true,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -104,7 +104,7 @@
                 "unlinkedCollapsed": true
               },
               "icon": "links-coming-in",
-              "title": "Backlinks for terminal"
+              "title": "Backlinks for system"
             }
           },
           {
@@ -156,13 +156,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "docs/macos-setup/terminal.md",
+                "file": "docs/macos-setup/system.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Outline of terminal"
+              "title": "Outline of system"
             }
           }
         ],
@@ -183,28 +183,37 @@
       "bases:Create new base": false
     }
   },
-  "active": "9a36c3c498d82aef",
+  "active": "17fa3077b932bc71",
   "lastOpenFiles": [
-    "docs/setup-guides.md",
-    "docs/macos-setup/terminal.md",
+    "public/images/macos-setup/system/view-options.png",
+    "images/macos-setup/system/view-options.png.md",
+    "docs/macos-setup/system.md",
+    "images/macos-setup/system",
+    "images/macos-setup",
+    "images",
+    "public/images/macos-setup/system",
+    "public/images/macos-setup",
+    "images/image-optionspng.md",
     "docs/macos-setup/applications.md",
+    "docs/macos-setup/images/view-option.png",
+    "docs/macos-setup/view-option.png",
+    "docs/macos-setup/finder.png",
+    "public/images",
+    "docs/macos-setup/2026-01-30_12-19-50.png",
+    "2026-01-30_12-19-50.png",
+    "docs/macos-setup/image.png",
+    "docs/macos-setup/terminal.md",
+    "docs/setup-guides.md",
     "generate_icons.js",
     "node_modules/lucide/dist/esm/lucide/src/icons/sandwich.js.map",
     "node_modules/lucide/dist/esm/lucide/src/icons/salad.js.map",
     "node_modules/lucide/dist/esm/lucide/src/icons/sailboat.js.map",
-    "node_modules/lucide/dist/esm/lucide/src/icons/russian-ruble.js.map",
-    "node_modules/lucide/dist/esm/lucide/src/icons/ruler.js.map",
-    "node_modules/lucide/dist/esm/lucide/src/icons/ruler-dimension-line.js.map",
-    "node_modules/lucide/dist/esm/lucide/src/icons/rss.js.map",
-    "node_modules/lucide/dist/esm/lucide/src/icons/rows-4.js.map",
-    "node_modules/lucide/dist/esm/lucide/src/icons/rows-3.js.map",
     "docs/linux-setup/applications.md",
     "docs/development/python.md",
     "docs/intro.md",
     "docs/utilitas/regex.md",
     "docs/utilitas/password.md",
     "docs/utilitas/json.md",
-    "docs/macos-setup/system.md",
     "docs/macos-setup/index.md",
     "docs/linux-setup/system.md",
     "docs/linux-setup/index.md",

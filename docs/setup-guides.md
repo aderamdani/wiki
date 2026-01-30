@@ -6,9 +6,9 @@ Panduan lengkap untuk setup development environment di berbagai operating system
 
 Konfigurasi dan optimasi macOS untuk development yang produktif.
 
+- [⚙️ System Configuration](./macos-setup/system) - Optimasi sistem, Finder settings, dan performance tuning
 - [⌨️ Terminal Setup](./macos-setup/terminal) - Konfigurasi terminal, iTerm2, Oh My Posh, dan shell utilities
 - [📦 Applications Setup](./macos-setup/applications) - Instalasi aplikasi development dan productivity tools
-- [⚙️ System Configuration](./macos-setup/system) - Optimasi sistem, Finder settings, dan performance tuning
 
 ## 🪟 Windows Setup
 
