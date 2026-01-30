@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "docs/setup-guides.md",
+                "file": "docs/macos-setup/terminal.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "setup-guides"
+              "title": "terminal"
             }
           }
         ]
@@ -94,7 +94,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "docs/setup-guides.md",
+                "file": "docs/macos-setup/terminal.md",
                 "collapseAll": true,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -104,7 +104,7 @@
                 "unlinkedCollapsed": true
               },
               "icon": "links-coming-in",
-              "title": "Backlinks for setup-guides"
+              "title": "Backlinks for terminal"
             }
           },
           {
@@ -156,13 +156,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "docs/setup-guides.md",
+                "file": "docs/macos-setup/terminal.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Outline of setup-guides"
+              "title": "Outline of terminal"
             }
           }
         ],
@@ -185,6 +185,8 @@
   },
   "active": "9a36c3c498d82aef",
   "lastOpenFiles": [
+    "docs/setup-guides.md",
+    "docs/macos-setup/terminal.md",
     "docs/macos-setup/applications.md",
     "generate_icons.js",
     "node_modules/lucide/dist/esm/lucide/src/icons/sandwich.js.map",
@@ -199,7 +201,6 @@
     "docs/linux-setup/applications.md",
     "docs/development/python.md",
     "docs/intro.md",
-    "docs/setup-guides.md",
     "docs/utilitas/regex.md",
     "docs/utilitas/password.md",
     "docs/utilitas/json.md",
