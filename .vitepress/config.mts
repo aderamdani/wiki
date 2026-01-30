@@ -34,7 +34,7 @@ export default defineConfig({
         text: 'macOS Setup',
         collapsed: false,
         items: [
-          { text: `${getIcon('Keyboard', { class: 'v-icon' })} Terminal Setup`, link: '/docs/macos-setup/' },
+          { text: `${getIcon('Keyboard', { class: 'v-icon' })} Terminal Setup`, link: '/docs/macos-setup/terminal' },
           { text: `${getIcon('Package', { class: 'v-icon' })} Applications Setup`, link: '/docs/macos-setup/applications' },
           { text: `${getIcon('Settings', { class: 'v-icon' })} System Configuration`, link: '/docs/macos-setup/system' }
         ]
